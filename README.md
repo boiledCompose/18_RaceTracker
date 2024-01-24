@@ -1,20 +1,7 @@
-Race tracker app
-=================================
+### 컴포저블에서 suspend function 호출
 
-The Race tracker app simulates the progress of two players in a race. The idea is to demonstrate 
-basic concepts of Kotlin coroutines. A user can start, pause, or reset the race with buttons in the 
-UI.
+`LaunchedEffect` 컴포저을은 컴포지션 내에서 제공된 정지 함수를 실행한다. 특징은 다음과 같다.
 
-Pre-requisites
---------------
-* Experience with building apps using Jetpack Compose.
-* How to create and run a project in Android Studio.
-* Familiar with Kotlin coroutines
-
-
-Getting Started
----------------
-1. Install Android Studio, if you don't already have it.
-2. Download the sample.
-3. Import the sample into Android Studio.
-4. Build and run the sample.
+- `LaunchedEffect()` 컴포저블을 사용하면 컴포저블에서 정지 함수를 안전하게 호출할 수 있다.
+- `LaunchedEffect()` 함수가 컴포지션을 시작하면 매개변수로 전달된 코드 블록으로 코루틴이 실행된다.
+- 코루틴은 `LaunchedEffect()`가 컴포지션을 종료하면 취소된다. 
